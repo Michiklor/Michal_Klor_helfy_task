@@ -1,0 +1,41 @@
+.task-filter {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0;
+}
+
+.filter-tab {
+  padding: 8px 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #777;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.filter-tab:hover {
+  color: #222;
+}
+
+.filter-tab--active {
+  color: #222;
+  font-weight: 600;
+  border-bottom-color: #2c2c2c;
+}
+
+.filter-badge {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 400;
+}
+
+.filter-badge--active {
+  color: #666;
+}

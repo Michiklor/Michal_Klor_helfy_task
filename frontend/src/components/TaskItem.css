@@ -1,0 +1,216 @@
+.task-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-stripe {
+  width: 4px;
+  flex-shrink: 0;
+}
+
+.task-stripe.priority--high   { background: #e53e3e; }
+.task-stripe.priority--medium { background: #dd8800; }
+.task-stripe.priority--low    { background: #2e7d32; }
+
+.task-body {
+  flex: 1;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.task-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.toggle-popup {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  margin-bottom: 4px;
+}
+
+.popup-btn {
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.popup-btn--yes {
+  background: #2c2c2c;
+  color: white;
+  border-color: #2c2c2c;
+}
+
+.popup-btn--yes:hover { background: #444; }
+.popup-btn--no:hover { border-color: #888; }
+
+.task-check {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #aaa;
+  background: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.task-check:hover {
+  border-color: #555;
+}
+
+.task-check--checked {
+  background: #2c2c2c;
+  border-color: #2c2c2c;
+  color: white;
+}
+
+.task-check svg {
+  width: 10px;
+  height: 8px;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  word-break: break-word;
+}
+
+.task-card--done .task-title {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.priority-badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.priority-badge.priority--high   { color: #e53e3e; }
+.priority-badge.priority--medium { color: #dd8800; }
+.priority-badge.priority--low    { color: #2e7d32; }
+
+.task-description {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  word-break: break-word;
+}
+
+.task-card--done .task-description {
+  color: #bbb;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-date {
+  font-size: 11px;
+  color: #bbb;
+}
+
+.task-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.task-action-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.task-action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.task-action-btn--edit:hover {
+  border-color: #888;
+  color: #222;
+  background: #f5f5f5;
+}
+
+.task-action-btn--delete:hover {
+  border-color: #e53e3e;
+  color: #e53e3e;
+  background: #fff0f0;
+}
+
+.task-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.confirm-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.confirm-text {
+  font-size: 12px;
+  color: #c00;
+}
+
+.task-action-btn--confirm-yes {
+  background: #e53e3e;
+  color: white;
+  border-color: #e53e3e;
+}
+
+.task-action-btn--confirm-yes:hover {
+  background: #c53030;
+}
+
+.task-card--done {
+  opacity: 0.75;
+}
