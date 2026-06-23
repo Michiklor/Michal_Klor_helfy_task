@@ -6,7 +6,7 @@ A fullstack task manager built with React and Express.js.
 
 1. cd backend
 2. npm install
-3. node server.js (runs on port 4000)
+3. npm run dev (runs on port 4000)
 
 ## Frontend Setup
 
